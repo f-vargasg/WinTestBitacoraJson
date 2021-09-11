@@ -14,6 +14,7 @@ namespace WinTestBitacoraJson
 {
     public partial class FrmPrincipal : Form
     {
+        private int conteo; 
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -24,6 +25,9 @@ namespace WinTestBitacoraJson
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Text = ConfigurationManager.AppSettings["frmCaption"]  + " (" + this.Name + ")";
+            lblValor.Text = string.Empty;
+            tmrPrueba.Enabled = false;
+            prgWork.Value = 0;
         }
 
         private string GetJsonData ()
@@ -87,6 +91,49 @@ namespace WinTestBitacoraJson
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrPrueba_Tick(object sender, EventArgs e)
+        {
+            conteo++;
+            lblValor.Text = conteo.ToString();
+            if (prgWork.Value < 100)
+            {
+                prgWork.Value++;
+            }
+            if (prgWork.Value == 100)
+            {
+                tmrPrueba.Enabled = false;
+            }
+            
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            tmrPrueba.Enabled = true;
+            prgWork.Value = 0;
+        }
+
+        private void btnDetener_Click(object sender, EventArgs e)
+        {
+            tmrPrueba.Enabled = false;
+        }
+
+        private void bntCalculo_Click(object sender, EventArgs e)
+        {
+            for (int n = 0; n < 100000; n++)
+            {
+                // something do
+                if (n % 100 == 0)
+                {
+                    prgWork.PerformStep();
+                }
+            }
         }
     }
 }
