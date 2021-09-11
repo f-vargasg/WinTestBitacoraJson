@@ -1,0 +1,36 @@
+﻿{
+    "StatusResponseCode": 200,
+    "CodError": "",
+    "Mensaje": "",
+    "OcurrioExcepcion": false,
+    "Data": {
+        "Data": {
+            "Data": [
+                {
+                    "Codigo": "NroMercado",
+                    "Descripcion": "21090768016"
+                },
+                {
+                    "Codigo": "CompraOVenta",
+                    "Descripcion": "C"
+                },
+                {
+                    "Codigo": "NroAsignacion",
+                    "Descripcion": "1"
+                },
+                {
+                    "Codigo": "EX0000",
+                    "Descripcion": "No puede modificar la operacion  por el estado de la misma."
+                }
+            ],
+            "Success": false,
+            "Process": {
+                "Codigo": "CONFAC",
+                "Descripcion": "Confirmar Asignación Custodio"
+            }
+        },
+        "Metadata": null,
+        "RequestId": "1080fd8d-d51c-4586-8261-1ad14931d081",
+        "Status": "EX0000"
+    }
+}
