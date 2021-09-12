@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestingBE;
 
 namespace WinTestBitacoraJson
 {
@@ -76,8 +77,9 @@ namespace WinTestBitacoraJson
             try
             {
                 string jsonString = GetJsonData();
-                var objeto = JsonConvert.DeserializeObject(jsonString);
+                var respProc = JsonConvert.DeserializeObject<GeneralResponseCylBE<RespProcesoBE>>(jsonString);
                 var frm = new FrmShowMessage();
+                frm.PnlErrEnvio.DisplayRespProc(respProc);
                 frm.ShowDialog();
             }
             catch (Exception)

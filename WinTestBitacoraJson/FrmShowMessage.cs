@@ -12,6 +12,19 @@ namespace WinTestBitacoraJson
 {
     public partial class FrmShowMessage : Form
     {
+
+        
+        public UCPanelError PnlErrEnvio
+        {
+            get { return ucPnlErrEnvio; }
+        }
+
+        public UCPanelError PnlErrConfRech
+        {
+            get { return ucPnlErrConfRech; }
+        }
+
+
         public FrmShowMessage()
         {
             InitializeComponent();
