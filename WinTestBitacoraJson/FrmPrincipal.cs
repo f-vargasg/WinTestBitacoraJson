@@ -82,10 +82,9 @@ namespace WinTestBitacoraJson
                 frm.PnlErrEnvio.DisplayRespProc(respProc);
                 frm.ShowDialog();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show(ex.Message);
             }
             
         }
@@ -135,6 +134,35 @@ namespace WinTestBitacoraJson
                 {
                     prgWork.PerformStep();
                 }
+            }
+        }
+
+        private void tlsStrpTest_Click(object sender, EventArgs e)
+        {
+            string salida = string.Empty ; 
+            // CommonUtils.GetAll(this, typeof(Label))
+            foreach (var item in CommonUtils.GetAll(this, typeof(Label)))
+            {
+                Console.WriteLine(item.Name);
+                salida += (item.Name + Environment.NewLine);
+            }
+
+            txtInput.Text = salida;
+        }
+
+        private void tlsStrDo2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string jsonString = GetJsonData();
+                var respProc = JsonConvert.DeserializeObject<GeneralResponseCylBE<RespProcesoBE>>(jsonString);
+                var frm = new FrmShowSimpleDialog();
+                frm.PnlErrEnvio.DisplayRespProc(respProc);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

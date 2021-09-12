@@ -32,8 +32,8 @@ namespace WinTestBitacoraJson
             this.tbMessageControl = new System.Windows.Forms.TabControl();
             this.tbPgRtaEnvio = new System.Windows.Forms.TabPage();
             this.tbPageRtaConfRech = new System.Windows.Forms.TabPage();
-            this.ucPanelErrorS1 = new WinTestBitacoraJson.UCPanelErrorS();
-            this.ucPanelErrorS2 = new WinTestBitacoraJson.UCPanelErrorS();
+            this.ucPnlErrEnvio = new WinTestBitacoraJson.UCPanelErrorS();
+            this.ucPnlErrConfRech = new WinTestBitacoraJson.UCPanelErrorS();
             this.tbMessageControl.SuspendLayout();
             this.tbPgRtaEnvio.SuspendLayout();
             this.tbPageRtaConfRech.SuspendLayout();
@@ -55,7 +55,7 @@ namespace WinTestBitacoraJson
             // 
             // tbPgRtaEnvio
             // 
-            this.tbPgRtaEnvio.Controls.Add(this.ucPanelErrorS2);
+            this.tbPgRtaEnvio.Controls.Add(this.ucPnlErrEnvio);
             this.tbPgRtaEnvio.Location = new System.Drawing.Point(4, 22);
             this.tbPgRtaEnvio.Margin = new System.Windows.Forms.Padding(4);
             this.tbPgRtaEnvio.Name = "tbPgRtaEnvio";
@@ -67,7 +67,7 @@ namespace WinTestBitacoraJson
             // 
             // tbPageRtaConfRech
             // 
-            this.tbPageRtaConfRech.Controls.Add(this.ucPanelErrorS1);
+            this.tbPageRtaConfRech.Controls.Add(this.ucPnlErrConfRech);
             this.tbPageRtaConfRech.Location = new System.Drawing.Point(4, 22);
             this.tbPageRtaConfRech.Margin = new System.Windows.Forms.Padding(4);
             this.tbPageRtaConfRech.Name = "tbPageRtaConfRech";
@@ -77,19 +77,19 @@ namespace WinTestBitacoraJson
             this.tbPageRtaConfRech.Text = "Respuesta de Conf./Rech";
             this.tbPageRtaConfRech.UseVisualStyleBackColor = true;
             // 
-            // ucPanelErrorS1
+            // ucPnlErrEnvio
             // 
-            this.ucPanelErrorS1.Location = new System.Drawing.Point(3, 3);
-            this.ucPanelErrorS1.Name = "ucPanelErrorS1";
-            this.ucPanelErrorS1.Size = new System.Drawing.Size(1168, 605);
-            this.ucPanelErrorS1.TabIndex = 0;
+            this.ucPnlErrEnvio.Location = new System.Drawing.Point(5, 6);
+            this.ucPnlErrEnvio.Name = "ucPnlErrEnvio";
+            this.ucPnlErrEnvio.Size = new System.Drawing.Size(1168, 605);
+            this.ucPnlErrEnvio.TabIndex = 1;
             // 
-            // ucPanelErrorS2
+            // ucPnlErrConfRech
             // 
-            this.ucPanelErrorS2.Location = new System.Drawing.Point(5, 6);
-            this.ucPanelErrorS2.Name = "ucPanelErrorS2";
-            this.ucPanelErrorS2.Size = new System.Drawing.Size(1168, 605);
-            this.ucPanelErrorS2.TabIndex = 1;
+            this.ucPnlErrConfRech.Location = new System.Drawing.Point(3, 3);
+            this.ucPnlErrConfRech.Name = "ucPnlErrConfRech";
+            this.ucPnlErrConfRech.Size = new System.Drawing.Size(1168, 605);
+            this.ucPnlErrConfRech.TabIndex = 0;
             // 
             // FrmShowSimpleDialog
             // 
@@ -111,7 +111,7 @@ namespace WinTestBitacoraJson
         private System.Windows.Forms.TabControl tbMessageControl;
         private System.Windows.Forms.TabPage tbPgRtaEnvio;
         private System.Windows.Forms.TabPage tbPageRtaConfRech;
-        private UCPanelErrorS ucPanelErrorS1;
-        private UCPanelErrorS ucPanelErrorS2;
+        private UCPanelErrorS ucPnlErrConfRech;
+        private UCPanelErrorS ucPnlErrEnvio;
     }
 }

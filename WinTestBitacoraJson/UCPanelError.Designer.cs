@@ -30,6 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgrList = new System.Windows.Forms.DataGridView();
             this.pnlRespMetaBnv = new System.Windows.Forms.Panel();
             this.lblMetaData = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblSuccess = new System.Windows.Forms.Label();
-            this.lblSucess = new System.Windows.Forms.Label();
             this.lblOcurrioExcepcion = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
@@ -52,12 +52,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblStatusResponseCode = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgrList = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrList)).BeginInit();
             this.pnlRespMetaBnv.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -74,9 +74,9 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.lblStatusResponseCode);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 15);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1131, 602);
+            this.panel2.Size = new System.Drawing.Size(1131, 621);
             this.panel2.TabIndex = 24;
             // 
             // panel1
@@ -84,16 +84,24 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dgrList);
             this.panel1.Controls.Add(this.pnlRespMetaBnv);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.lblSuccess);
-            this.panel1.Controls.Add(this.lblSucess);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(14, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1112, 406);
             this.panel1.TabIndex = 25;
+            // 
+            // dgrList
+            // 
+            this.dgrList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrList.Location = new System.Drawing.Point(43, 26);
+            this.dgrList.Name = "dgrList";
+            this.dgrList.Size = new System.Drawing.Size(254, 95);
+            this.dgrList.TabIndex = 23;
             // 
             // pnlRespMetaBnv
             // 
@@ -244,16 +252,6 @@
             this.lblSuccess.TabIndex = 16;
             this.lblSuccess.Text = "lblSuccess";
             // 
-            // lblSucess
-            // 
-            this.lblSucess.AutoSize = true;
-            this.lblSucess.Location = new System.Drawing.Point(33, 161);
-            this.lblSucess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSucess.Name = "lblSucess";
-            this.lblSucess.Size = new System.Drawing.Size(60, 16);
-            this.lblSucess.TabIndex = 15;
-            this.lblSucess.Text = "Success";
-            // 
             // lblOcurrioExcepcion
             // 
             this.lblOcurrioExcepcion.AutoSize = true;
@@ -342,13 +340,14 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Respuesta Mensaje:";
             // 
-            // dgrList
+            // label2
             // 
-            this.dgrList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrList.Location = new System.Drawing.Point(43, 26);
-            this.dgrList.Name = "dgrList";
-            this.dgrList.Size = new System.Drawing.Size(254, 95);
-            this.dgrList.TabIndex = 23;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 161);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Success:";
             // 
             // UCPanelError
             // 
@@ -361,11 +360,11 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrList)).EndInit();
             this.pnlRespMetaBnv.ResumeLayout(false);
             this.pnlRespMetaBnv.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,7 +386,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblSuccess;
-        private System.Windows.Forms.Label lblSucess;
         private System.Windows.Forms.Label lblOcurrioExcepcion;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblMessage;
@@ -397,5 +395,6 @@
         private System.Windows.Forms.Label lblStatusResponseCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgrList;
+        private System.Windows.Forms.Label label2;
     }
 }

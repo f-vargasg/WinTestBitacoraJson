@@ -30,8 +30,8 @@
         {
             this.tbMessageControl = new System.Windows.Forms.TabControl();
             this.tbPgRtaEnvio = new System.Windows.Forms.TabPage();
-            this.ucPnlErrEnvio = new WinTestBitacoraJson.UCPanelError();
             this.tbPageRtaConfRech = new System.Windows.Forms.TabPage();
+            this.ucPnlErrEnvio = new WinTestBitacoraJson.UCPanelError();
             this.ucPnlErrConfRech = new WinTestBitacoraJson.UCPanelError();
             this.tbMessageControl.SuspendLayout();
             this.tbPgRtaEnvio.SuspendLayout();
@@ -64,17 +64,6 @@
             this.tbPgRtaEnvio.Text = "Respuesta Envio";
             this.tbPgRtaEnvio.UseVisualStyleBackColor = true;
             // 
-            // ucPnlErrEnvio
-            // 
-            this.ucPnlErrEnvio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucPnlErrEnvio.Location = new System.Drawing.Point(4, 0);
-            this.ucPnlErrEnvio.Margin = new System.Windows.Forms.Padding(4);
-            this.ucPnlErrEnvio.Name = "ucPnlErrEnvio";
-            this.ucPnlErrEnvio.Size = new System.Drawing.Size(1103, 662);
-            this.ucPnlErrEnvio.TabIndex = 0;
-            // 
             // tbPageRtaConfRech
             // 
             this.tbPageRtaConfRech.Controls.Add(this.ucPnlErrConfRech);
@@ -82,10 +71,21 @@
             this.tbPageRtaConfRech.Margin = new System.Windows.Forms.Padding(4);
             this.tbPageRtaConfRech.Name = "tbPageRtaConfRech";
             this.tbPageRtaConfRech.Padding = new System.Windows.Forms.Padding(4);
-            this.tbPageRtaConfRech.Size = new System.Drawing.Size(1111, 581);
+            this.tbPageRtaConfRech.Size = new System.Drawing.Size(1111, 685);
             this.tbPageRtaConfRech.TabIndex = 1;
             this.tbPageRtaConfRech.Text = "Respuesta de Conf./Rech";
             this.tbPageRtaConfRech.UseVisualStyleBackColor = true;
+            // 
+            // ucPnlErrEnvio
+            // 
+            this.ucPnlErrEnvio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucPnlErrEnvio.Location = new System.Drawing.Point(5, 0);
+            this.ucPnlErrEnvio.Margin = new System.Windows.Forms.Padding(5);
+            this.ucPnlErrEnvio.Name = "ucPnlErrEnvio";
+            this.ucPnlErrEnvio.Size = new System.Drawing.Size(1471, 812);
+            this.ucPnlErrEnvio.TabIndex = 0;
             // 
             // ucPnlErrConfRech
             // 
@@ -93,7 +93,7 @@
             this.ucPnlErrConfRech.Location = new System.Drawing.Point(4, 4);
             this.ucPnlErrConfRech.Margin = new System.Windows.Forms.Padding(5);
             this.ucPnlErrConfRech.Name = "ucPnlErrConfRech";
-            this.ucPnlErrConfRech.Size = new System.Drawing.Size(1103, 573);
+            this.ucPnlErrConfRech.Size = new System.Drawing.Size(1103, 677);
             this.ucPnlErrConfRech.TabIndex = 1;
             // 
             // FrmShowMessage
@@ -118,7 +118,7 @@
         private System.Windows.Forms.TabControl tbMessageControl;
         private System.Windows.Forms.TabPage tbPgRtaEnvio;
         private System.Windows.Forms.TabPage tbPageRtaConfRech;
-        private UCPanelError ucPnlErrEnvio;
         private UCPanelError ucPnlErrConfRech;
+        private UCPanelError ucPnlErrEnvio;
     }
 }

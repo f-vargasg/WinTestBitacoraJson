@@ -16,6 +16,24 @@ namespace WinTestBitacoraJson
         public UCPanelErrorS()
         {
             InitializeComponent();
+            InitMyComponents();
+        }
+
+        public bool MyProperty { get; set; }
+
+        private void InitMyComponents()
+        {
+            foreach (var item in CommonUtils.GetAll(this, typeof(Label)))
+            {
+                if (item is Label)
+                {
+                    Console.WriteLine(item.Name);
+                    if (item.Name.Substring(0, 3) == "lbl")
+                    {
+                        ((Label)item).Text = string.Empty;
+                    }
+                }
+            }
         }
 
         public void DisplayRespProc(GeneralResponseCylBE<RespProcesoBE> pResProc)
@@ -39,9 +57,23 @@ namespace WinTestBitacoraJson
             lblRequestId.Text = pResProc.Data.RequestId;
             lblStatus.Text = pResProc.Data.Status;
 
-            // fill datagrid
-            var list = new BindingList<DetalleProcesoBE>(pResProc.Data.Data.Data);
-            dgrList.DataSource = list;
+            // detalle 
+            lblNroMercado.Text = pResProc.Data.Data.Data[0].Descripcion;
+            lblCompraOVenta.Text = (pResProc.Data.Data.Data[1].Descripcion == "C" ? "Compra" : "Venta");
+            lblNroAsignacion.Text = pResProc.Data.Data.Data[2].Descripcion;
+            lblDetalleRta.Text = pResProc.Data.Data.Data[3].Codigo + "-" +
+                                 pResProc.Data.Data.Data[3].Descripcion;
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlRespMetaBnv_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

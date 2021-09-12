@@ -36,15 +36,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tlstrDo = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tlsStrpTest = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.prgWork = new System.Windows.Forms.ProgressBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tmrPrueba = new System.Windows.Forms.Timer(this.components);
-            this.lblValor = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnDetener = new System.Windows.Forms.Button();
             this.bntCalculo = new System.Windows.Forms.Button();
+            this.btnDetener = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.tmrPrueba = new System.Windows.Forms.Timer(this.components);
+            this.tlsStrDo2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -100,7 +101,8 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlstrDo,
-            this.toolStripButton2,
+            this.tlsStrDo2,
+            this.tlsStrpTest,
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -119,15 +121,16 @@
             this.tlstrDo.ToolTipText = "Do";
             this.tlstrDo.Click += new System.EventHandler(this.tlstrDo_Click);
             // 
-            // toolStripButton2
+            // tlsStrpTest
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.ToolTipText = "Test";
+            this.tlsStrpTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsStrpTest.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrpTest.Image")));
+            this.tlsStrpTest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsStrpTest.Name = "tlsStrpTest";
+            this.tlsStrpTest.Size = new System.Drawing.Size(23, 22);
+            this.tlsStrpTest.Text = "toolStripButton2";
+            this.tlsStrpTest.ToolTipText = "Test";
+            this.tlsStrpTest.Click += new System.EventHandler(this.tlsStrpTest_Click);
             // 
             // toolStripButton3
             // 
@@ -174,28 +177,15 @@
             this.splitContainer1.SplitterDistance = 269;
             this.splitContainer1.TabIndex = 6;
             // 
-            // tmrPrueba
+            // bntCalculo
             // 
-            this.tmrPrueba.Tick += new System.EventHandler(this.tmrPrueba_Tick);
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(144, 16);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(45, 16);
-            this.lblValor.TabIndex = 2;
-            this.lblValor.Text = "label3";
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(263, 9);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(88, 23);
-            this.btnStart.TabIndex = 3;
-            this.btnStart.Text = "Inicio";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.bntCalculo.Location = new System.Drawing.Point(549, 9);
+            this.bntCalculo.Name = "bntCalculo";
+            this.bntCalculo.Size = new System.Drawing.Size(88, 23);
+            this.bntCalculo.TabIndex = 5;
+            this.bntCalculo.Text = "Calcular";
+            this.bntCalculo.UseVisualStyleBackColor = true;
+            this.bntCalculo.Click += new System.EventHandler(this.bntCalculo_Click);
             // 
             // btnDetener
             // 
@@ -207,15 +197,39 @@
             this.btnDetener.UseVisualStyleBackColor = true;
             this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
             // 
-            // bntCalculo
+            // btnStart
             // 
-            this.bntCalculo.Location = new System.Drawing.Point(549, 9);
-            this.bntCalculo.Name = "bntCalculo";
-            this.bntCalculo.Size = new System.Drawing.Size(88, 23);
-            this.bntCalculo.TabIndex = 5;
-            this.bntCalculo.Text = "Calcular";
-            this.bntCalculo.UseVisualStyleBackColor = true;
-            this.bntCalculo.Click += new System.EventHandler(this.bntCalculo_Click);
+            this.btnStart.Location = new System.Drawing.Point(263, 9);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(88, 23);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "Inicio";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(144, 16);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(45, 16);
+            this.lblValor.TabIndex = 2;
+            this.lblValor.Text = "label3";
+            // 
+            // tmrPrueba
+            // 
+            this.tmrPrueba.Tick += new System.EventHandler(this.tmrPrueba_Tick);
+            // 
+            // tlsStrDo2
+            // 
+            this.tlsStrDo2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsStrDo2.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrDo2.Image")));
+            this.tlsStrDo2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsStrDo2.Name = "tlsStrDo2";
+            this.tlsStrDo2.Size = new System.Drawing.Size(23, 22);
+            this.tlsStrDo2.Text = "toolStripButton1";
+            this.tlsStrDo2.ToolTipText = "Do2";
+            this.tlsStrDo2.Click += new System.EventHandler(this.tlsStrDo2_Click);
             // 
             // FrmPrincipal
             // 
@@ -251,7 +265,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tlstrDo;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tlsStrpTest;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ProgressBar prgWork;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -260,6 +274,7 @@
         private System.Windows.Forms.Button btnDetener;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button bntCalculo;
+        private System.Windows.Forms.ToolStripButton tlsStrDo2;
     }
 }
 

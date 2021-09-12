@@ -23,7 +23,17 @@ namespace WinTestBitacoraJson
 
         private void InitMyComponents()
         {
-
+            foreach (var item in CommonUtils.GetAll(this, typeof(Label)))
+            {
+                if (item is Label)
+                {
+                    Console.WriteLine(item.Name);
+                    if (item.Name.Substring(0, 3) == "lbl")
+                    {
+                        ((Label)item).Text = string.Empty;
+                    }
+                }
+            }
         }
 
         public void DisplayRespProc (GeneralResponseCylBE<RespProcesoBE> pResProc)
