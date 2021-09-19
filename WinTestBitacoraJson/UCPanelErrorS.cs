@@ -36,44 +36,48 @@ namespace WinTestBitacoraJson
             }
         }
 
-        public void DisplayRespProc(GeneralResponseCylBE<RespProcesoBE> pResProc)
+        public void FillData(string pStatusResponseCode,
+                     string pCodError,
+                     string pMessage,
+                     bool pOcurrioExcepcion,
+                     bool pSuccess,
+                     string pCodigo,
+                     string pDescripcion,
+                     string pMetaData,
+                     string pRequestId,
+                     string pStatus,
+                     string pNroMercado,
+                     string pCompraOVenta,
+                     string pNroAsignacion,
+                     string pDetalleRta)
         {
             // General structure
-            lblStatusResponseCode.Text = pResProc.StatusResponseCode.ToString();
-            lblCodError.Text = (pResProc.CodError == string.Empty ? "No hay Error" : pResProc.CodError);
-            lblMessage.Text = pResProc.Mensaje;
-            lblOcurrioExcepcion.Text = (pResProc.OcurrioExcepcion ? "Sí" : "No");
+            lblStatusResponseCode.Text = pStatusResponseCode;
+            lblCodError.Text = (pCodError == string.Empty ? "No hay Error" : pCodError);
+            lblMessage.Text = pMessage;
+            lblOcurrioExcepcion.Text = (pOcurrioExcepcion ? "Sí" : "No");
 
 
             // Data.RespProc.Data
-            lblSuccess.Text = (pResProc.Data.Data.Success ? "Sí" : "No");
+            lblSuccess.Text = (pSuccess ? "Sí" : "No");
             // Data.RespProc.Data.Process
-            lblCodigo.Text = pResProc.Data.Data.Process.Codigo;
-            lblDescripcion.Text = pResProc.Data.Data.Process.Descripcion;
+            lblCodigo.Text = pCodigo;
+            lblDescripcion.Text = pDescripcion;
 
             // Data.RespProcBE
-            lblMetaData.Text = ((pResProc.Data.Metadata == string.Empty) ||
-                                 (pResProc.Data.Metadata == null) ? "null" : pResProc.Data.Metadata);
-            lblRequestId.Text = pResProc.Data.RequestId;
-            lblStatus.Text = pResProc.Data.Status;
+            lblMetaData.Text = ((pMetaData == string.Empty) ||
+                                 (pMetaData == null) ? "null" : pMetaData);
+            lblRequestId.Text = pRequestId;
+            lblStatus.Text = pStatus;
 
             // detalle 
-            lblNroMercado.Text = pResProc.Data.Data.Data[0].Descripcion;
-            lblCompraOVenta.Text = (pResProc.Data.Data.Data[1].Descripcion == "C" ? "Compra" : "Venta");
-            lblNroAsignacion.Text = pResProc.Data.Data.Data[2].Descripcion;
-            lblDetalleRta.Text = pResProc.Data.Data.Data[3].Codigo + "-" +
-                                 pResProc.Data.Data.Data[3].Descripcion;
+            lblNroMercado.Text = pNroMercado;
+            lblCompraOVenta.Text = pCompraOVenta;
+            lblNroAsignacion.Text = pNroAsignacion;
+            lblDetalleRta.Text = pDetalleRta;
 
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlRespMetaBnv_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

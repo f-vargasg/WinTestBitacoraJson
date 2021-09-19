@@ -157,7 +157,15 @@ namespace WinTestBitacoraJson
                 string jsonString = GetJsonData();
                 var respProc = JsonConvert.DeserializeObject<GeneralResponseCylBE<RespProcesoBE>>(jsonString);
                 var frm = new FrmShowSimpleDialog();
-                frm.PnlErrEnvio.DisplayRespProc(respProc);
+                string metaData = ((respProc.Data.Metadata == string.Empty) ||
+                                 (respProc.Data.Metadata == null) ? "null" : respProc.Data.Metadata);
+                frm.FillDataTab(2, respProc.StatusResponseCode.ToString(), respProc.CodError, respProc.Mensaje,
+                               respProc.OcurrioExcepcion, respProc.Data.Data.Success, respProc.Data.Data.Process.Codigo,
+                               respProc.Data.Data.Process.Descripcion, metaData, respProc.Data.RequestId,
+                               respProc.Data.Status, respProc.Data.Data.Data[0].Descripcion,
+                               (respProc.Data.Data.Data[1].Descripcion == "C" ? "Compra" : "Venta"),
+                               respProc.Data.Data.Data[2].Descripcion,
+                               respProc.Data.Data.Data[3].Codigo + "-" + respProc.Data.Data.Data[3].Descripcion);
                 frm.ShowDialog();
             }
             catch (Exception ex)

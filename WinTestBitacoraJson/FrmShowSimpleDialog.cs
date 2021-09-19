@@ -33,5 +33,40 @@ namespace WinTestBitacoraJson
         {
             this.StartPosition = FormStartPosition.CenterParent;
         }
+
+        public void FillDataTab(int pWichTab,
+                        string pStatusResponseCode,
+                        string pCodError,
+                        string pMessage,
+                        bool pOcurrioExcepcion,
+                        bool pSuccess,
+                        string pCodigo,
+                        string pDescripcion,
+                        string pMetaData,
+                        string pRequestId,
+                        string pStatus,
+                        string pNroMercado,
+                        string pCompraOVenta,
+                        string pNroAsignacion,
+                        string pDetalleRta)
+        {
+            switch (pWichTab)
+            {
+                case 1:
+                    ucPnlErrEnvio.FillData(pStatusResponseCode, pCodError, pMessage, pOcurrioExcepcion,
+                                           pSuccess, pCodError, pDescripcion, pMetaData, pRequestId,
+                                           pStatus, pNroMercado, pCompraOVenta, pNroAsignacion,
+                                           pDetalleRta);
+                    break;
+                case 2:
+                    ucPnlErrConfRech.FillData(pStatusResponseCode, pCodError, pMessage, pOcurrioExcepcion,
+                                           pSuccess, pCodError, pDescripcion, pMetaData, pRequestId,
+                                           pStatus, pNroMercado, pCompraOVenta, pNroAsignacion,
+                                           pDetalleRta);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

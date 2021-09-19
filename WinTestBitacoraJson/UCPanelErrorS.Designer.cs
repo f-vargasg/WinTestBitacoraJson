@@ -98,7 +98,6 @@ namespace WinTestBitacoraJson
             this.grpInfoBnv.TabIndex = 27;
             this.grpInfoBnv.TabStop = false;
             this.grpInfoBnv.Text = "Respuesta Servidor BNV";
-            this.grpInfoBnv.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // grpBoxInfoProceso
             // 
@@ -414,7 +413,6 @@ namespace WinTestBitacoraJson
             this.pnlRespMetaBnv.Name = "pnlRespMetaBnv";
             this.pnlRespMetaBnv.Size = new System.Drawing.Size(1087, 100);
             this.pnlRespMetaBnv.TabIndex = 22;
-            this.pnlRespMetaBnv.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRespMetaBnv_Paint);
             // 
             // lblMetaData
             // 
